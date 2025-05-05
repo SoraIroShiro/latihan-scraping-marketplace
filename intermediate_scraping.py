@@ -80,6 +80,10 @@ def main():
     all_books_data = scrape_book(BASE_URL)
     df = pd.DataFrame(all_books_data)
     print(df)
+
+    # Simpan ke dalam file CSV
+    df.to_csv("books_scraped.csv", index=False)
+    print("Data telah disimpan ke 'books_scraped.csv'")
  
  
 if __name__ == '__main__':
